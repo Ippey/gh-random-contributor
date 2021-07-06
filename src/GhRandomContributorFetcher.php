@@ -29,7 +29,7 @@ class GhRandomContributorFetcher
         try {
             $response = $this->httpClient->request('GET', $url, []);
             if ($response->getStatusCode() !== 200) {
-                throw new TransportException();
+                throw new TransportException('Can not get contributor.');
             }
             $headers = $response->getHeaders();
             $links = $this->parseLink($headers['link'][0] ?? '');
