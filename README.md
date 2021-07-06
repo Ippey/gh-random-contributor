@@ -13,6 +13,8 @@ composer require ippey/gh-random-contributor
 ```php
 <?php
 
+require(__DIR__ . '/vendor/autoload.php');
+
 use Ippey\GhRandomContributor\GhRandomContributor;
 use Ippey\GhRandomContributor\GhRandomContributorFetchException;
 
